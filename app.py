@@ -5,6 +5,7 @@ import re
 import os
 import g2p_en as g2p
 import ast
+import time
 
 DEBUG = True
 app = Flask(__name__)
@@ -71,9 +72,10 @@ def api_g2p():
         query = request.args.get('query')
         headlines = ast.literal_eval(request.args.get('headlines'))
         print(len(headlines))
+        tic = time.time()
         choice = headline_choice(headlines,query)
-
-        return jsonify({'index': choice})
+        toc = time.time()
+        return jsonify({'index': choice, 'time': toc - tic})
 
     except Exception:
         print("Could not perform search")
