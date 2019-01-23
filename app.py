@@ -1,5 +1,4 @@
 from flask import Flask, render_template, flash, request, jsonify, abort
-from wtforms import Form, TextField, TextAreaField, validators, StringField, SubmitField
 import traceback
 import re
 import os
