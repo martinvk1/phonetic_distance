@@ -48,7 +48,7 @@ def headline_choice(headlines, query):
             t, query = query, t
         if len(query) == len(t):
             t += ' '
-        for i in range(0, len(t) - len(query), 1):
+        for i in range(0, len(t) - len(query), 2):
             substring = t[i:i+len(query)]
             edit_distances.append(levenshtein(query, substring))
         if min(edit_distances) < min_distance:
