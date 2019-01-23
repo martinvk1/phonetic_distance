@@ -8,3 +8,4 @@ WTForms==2.2.1
 psycopg2==2.7.6.1
 tensorflow==1.11.0
 g2p-en==1.0.1
+nltk==3.4
