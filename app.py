@@ -58,9 +58,6 @@ def headline_choice(headlines, query):
     return chosen_index
 
 
-class ReusableForm(Form):
-	name = TextField('Search query:', validators=[validators.required()])
-
 
 @app.route('/api/g2p', methods=['GET', 'POST'])
 def api_g2p():
